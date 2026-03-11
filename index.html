@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Análise Cardio</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; background-color: #f0f2f5; }
+        .header { background-color: #fff; padding: 15px 30px; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .header h1 { margin: 0; color: #333; font-size: 1.5em; }
+        .update-button { background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; transition: background-color 0.3s; }
+        .update-button:hover { background-color: #0056b3; }
+        .content { padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dashboard de Análise</h1>
+        <a href="{{ url_for('atualizar_dados') }}" class="update-button">Atualizar Análise</a>
+    </div>
+    <div class="content">{{ report_content|safe }}</div>
+</body>
+</html>

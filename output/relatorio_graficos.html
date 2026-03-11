@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Relatório de Gráficos de Análise</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px;}
+        h2 { color: #34495e; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; margin-top: 40px;}
+        h3 { color: #34495e; margin-top: 30px;}
+        .card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        img { max-width: 100%; height: auto; border-radius: 5px; }
+        .table { width: 100%; border-collapse: collapse; margin-top: 1em; font-size: 0.9em; }
+        .table th, .table td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        .table th { background-color: #3498db; color: white; }
+        .table tr:nth-child(even) { background-color: #f9f9f9; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
+        .nav { text-align: center; padding: 10px 0; background-color: #ecf0f1; border-radius: 5px; margin-bottom: 20px; }
+        .nav a { text-decoration: none; color: #2980b9; font-weight: bold; padding: 10px 15px; border-radius: 5px; transition: background-color 0.3s; }
+        .nav a:hover, .nav a.active { background-color: #3498db; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Relatório de Gráficos de Análise</h1>
+        <div class="nav">
+<a href="relatorio_tabelas.html">Tabelas</a>
+<a href="relatorio_graficos.html" class="active">Gráficos</a>
+</div>
+<h2>Visualizações</h2><div class="card"><h3>Distribuição da Idade</h3><img src="distribuicao_idade.png"></div><div class="card"><h3>Boxplots de Variáveis Numéricas vs CHD</h3><img src="boxplots_numericas.png"></div><div class="card"><h3>Frequência de Fatores de Risco</h3><img src="frequencia_fatores_risco.png"></div><div class="card"><h3>Matriz de Correlação</h3><img src="heatmap_correlacao.png"></div><div class="card"><h3>Proporção de CHD por Total de Fatores de Risco</h3><img src="risco_acumulado_vs_chd.png"></div><h2>Análises Adicionais</h2><div class="card grid-container"><div><img src="alteracao_doppler_ducto_venoso.png"></div><div><img src="alteracao_eixo_cardiaco.png"></div><div><img src="alteracao_quatro_camaras.png"></div></div><div class="card"><h3>Pressão Sistólica por Trimestre</h3><img src="pressao_por_trimestre.png"></div><div class="card"><h3>Translucência Nucal vs. Frequência Cardíaca Fetal</h3><img src="tn_vs_fcf.png"></div>
+    </div>
+</body>
+</html>

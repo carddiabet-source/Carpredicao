@@ -1,0 +1,1198 @@
+
+<style>
+    .container { max-width: 1200px; margin: auto; background: #fff; padding: 20px 40px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px;}
+    h2 { color: #34495e; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; margin-top: 40px;}
+    h3 { color: #34495e; margin-top: 30px;}
+    .card { background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-top: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); overflow: auto; }
+    img { max-width: 100%; height: auto; border-radius: 5px; display: block; margin: 1em auto; }
+    .table { width: 100%; border-collapse: collapse; margin-top: 1em; font-size: 0.9em; }
+    .table th, .table td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+    .table th { background-color: #3498db; color: white; }
+    .table tr:nth-child(even) { background-color: #f9f9f9; }
+    .plots-container { display: flex; flex-wrap: wrap; gap: 20px; }
+    .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 20px; }
+    .tab { overflow: hidden; border: 1px solid #ccc; background-color: #f1f1f1; border-radius: 8px 8px 0 0; }
+    .tab button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; font-size: 17px; }
+    .tab button:hover { background-color: #ddd; }
+    .tab button.active { background-color: #3498db; color: white; }
+    .tabcontent { display: none; padding: 6px 12px; border: 1px solid #ccc; border-top: none; border-radius: 0 0 8px 8px; background-color: white; animation: fadeEffect 1s; }
+    @keyframes fadeEffect { from {opacity: 0;} to {opacity: 1;} }
+</style>
+
+    <div class="container">
+        <h1>Relatório de Análise Descritiva Completa</h1>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Tables')" id="defaultOpen">Tabelas</button>
+            <button class="tablinks" onclick="openTab(event, 'Graphs')">Gráficos</button>
+        </div>
+
+        <div id="Tables" class="tabcontent">
+            <h2>Informações Gerais</h2>
+<div class="card">
+    <h3>Valores Faltantes</h3>
+    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Total Faltante</th>
+      <th>% Faltante</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>consulta_numero</th>
+      <td>135</td>
+      <td>50.0</td>
+    </tr>
+    <tr>
+      <th>data_consulta</th>
+      <td>270</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>idade</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>idade_gestacional</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>pressao_sistolica</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>bpm_materno</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>saturacao</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>temperatura_corporal</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>altura</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>peso_fetal</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>diabetes_gestacional</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>hipertensao</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>hipertensao_pre_eclampsia</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>obesidade_pre_gestacional</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>historico_familiar_chd</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>uso_medicamentos</th>
+      <td>135</td>
+      <td>50.0</td>
+    </tr>
+    <tr>
+      <th>tabagismo</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>alcoolismo</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>frequencia_cardiaca_fetal</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>circunferencia_cefalica_fetal_mm</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>circunferencia_abdominal_mm</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>comprimento_femur_mm</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>translucencia_nucal_mm</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>doppler_ducto_venoso</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>eixo_cardiaco</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>quatro_camaras</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>chd_confirmada</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>tipo_chd</th>
+      <td>270</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>peso</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>ano</th>
+      <td>270</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>imc</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>class_pressao</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>trimestre</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>total_fatores_risco</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>alteracao_estrutural</th>
+      <td>135</td>
+      <td>50.0</td>
+    </tr>
+    <tr>
+      <th>num_chd_codigos</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>gestante_id</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>codigo_chd</th>
+      <td>270</td>
+      <td>100.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="card grid-container">
+<div>
+    <h3>Estatísticas Descritivas (Variáveis Numéricas)</h3>
+    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Média</th>
+      <th>Desvio Padrão</th>
+      <th>Mínimo</th>
+      <th>Q1</th>
+      <th>Mediana</th>
+      <th>Q3</th>
+      <th>Máximo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>consulta_numero</th>
+      <td>2.000000</td>
+      <td>0.819538</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>2.000000</td>
+      <td>3.000000</td>
+      <td>3.000000</td>
+    </tr>
+    <tr>
+      <th>data_consulta</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>idade</th>
+      <td>29.407407</td>
+      <td>8.167663</td>
+      <td>14.000000</td>
+      <td>23.000000</td>
+      <td>28.000000</td>
+      <td>33.000000</td>
+      <td>50.000000</td>
+    </tr>
+    <tr>
+      <th>idade_gestacional</th>
+      <td>39.581481</td>
+      <td>4.884208</td>
+      <td>24.000000</td>
+      <td>36.900000</td>
+      <td>39.800000</td>
+      <td>43.075000</td>
+      <td>49.800000</td>
+    </tr>
+    <tr>
+      <th>pressao_sistolica</th>
+      <td>142.362963</td>
+      <td>6.845189</td>
+      <td>130.000000</td>
+      <td>138.000000</td>
+      <td>141.000000</td>
+      <td>147.000000</td>
+      <td>154.000000</td>
+    </tr>
+    <tr>
+      <th>bpm_materno</th>
+      <td>101.448148</td>
+      <td>7.004718</td>
+      <td>90.000000</td>
+      <td>96.000000</td>
+      <td>101.000000</td>
+      <td>107.000000</td>
+      <td>114.000000</td>
+    </tr>
+    <tr>
+      <th>saturacao</th>
+      <td>91.318519</td>
+      <td>1.339433</td>
+      <td>90.000000</td>
+      <td>90.000000</td>
+      <td>91.000000</td>
+      <td>92.000000</td>
+      <td>94.000000</td>
+    </tr>
+    <tr>
+      <th>temperatura_corporal</th>
+      <td>36.903704</td>
+      <td>0.353823</td>
+      <td>36.300000</td>
+      <td>36.600000</td>
+      <td>36.900000</td>
+      <td>37.200000</td>
+      <td>37.500000</td>
+    </tr>
+    <tr>
+      <th>altura</th>
+      <td>1.662481</td>
+      <td>0.055119</td>
+      <td>1.560000</td>
+      <td>1.610000</td>
+      <td>1.670000</td>
+      <td>1.710000</td>
+      <td>1.740000</td>
+    </tr>
+    <tr>
+      <th>peso_fetal</th>
+      <td>2655.659259</td>
+      <td>926.077447</td>
+      <td>710.000000</td>
+      <td>1820.000000</td>
+      <td>2815.000000</td>
+      <td>3410.000000</td>
+      <td>4140.000000</td>
+    </tr>
+    <tr>
+      <th>diabetes_gestacional</th>
+      <td>0.207407</td>
+      <td>0.406203</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>hipertensao</th>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>hipertensao_pre_eclampsia</th>
+      <td>0.603704</td>
+      <td>0.490036</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>obesidade_pre_gestacional</th>
+      <td>0.214815</td>
+      <td>0.411456</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>historico_familiar_chd</th>
+      <td>0.185185</td>
+      <td>0.389169</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>tabagismo</th>
+      <td>0.096296</td>
+      <td>0.295545</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>alcoolismo</th>
+      <td>0.100000</td>
+      <td>0.300557</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>frequencia_cardiaca_fetal</th>
+      <td>174.455556</td>
+      <td>8.804985</td>
+      <td>161.000000</td>
+      <td>167.000000</td>
+      <td>175.000000</td>
+      <td>182.750000</td>
+      <td>188.000000</td>
+    </tr>
+    <tr>
+      <th>circunferencia_cefalica_fetal_mm</th>
+      <td>328.336296</td>
+      <td>11.949473</td>
+      <td>310.000000</td>
+      <td>315.775000</td>
+      <td>331.150000</td>
+      <td>337.350000</td>
+      <td>348.000000</td>
+    </tr>
+    <tr>
+      <th>circunferencia_abdominal_mm</th>
+      <td>309.855185</td>
+      <td>11.683765</td>
+      <td>292.100000</td>
+      <td>299.000000</td>
+      <td>311.900000</td>
+      <td>319.900000</td>
+      <td>329.000000</td>
+    </tr>
+    <tr>
+      <th>comprimento_femur_mm</th>
+      <td>70.406667</td>
+      <td>2.626069</td>
+      <td>65.300000</td>
+      <td>68.700000</td>
+      <td>70.800000</td>
+      <td>72.100000</td>
+      <td>74.900000</td>
+    </tr>
+    <tr>
+      <th>translucencia_nucal_mm</th>
+      <td>3.498519</td>
+      <td>0.613659</td>
+      <td>2.500000</td>
+      <td>2.900000</td>
+      <td>3.550000</td>
+      <td>4.100000</td>
+      <td>4.400000</td>
+    </tr>
+    <tr>
+      <th>chd_confirmada</th>
+      <td>0.500000</td>
+      <td>0.500929</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.500000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>tipo_chd</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>peso</th>
+      <td>69.601481</td>
+      <td>10.993763</td>
+      <td>37.200000</td>
+      <td>65.100000</td>
+      <td>68.850000</td>
+      <td>75.000000</td>
+      <td>89.200000</td>
+    </tr>
+    <tr>
+      <th>ano</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>imc</th>
+      <td>24.903657</td>
+      <td>4.114266</td>
+      <td>13.463719</td>
+      <td>22.810437</td>
+      <td>24.982699</td>
+      <td>27.547135</td>
+      <td>35.210703</td>
+    </tr>
+    <tr>
+      <th>total_fatores_risco</th>
+      <td>2.322222</td>
+      <td>1.003649</td>
+      <td>1.000000</td>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>3.000000</td>
+      <td>4.000000</td>
+    </tr>
+    <tr>
+      <th>num_chd_codigos</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>gestante_id</th>
+      <td>68.000000</td>
+      <td>53.659397</td>
+      <td>1.000000</td>
+      <td>23.000000</td>
+      <td>45.500000</td>
+      <td>112.750000</td>
+      <td>180.000000</td>
+    </tr>
+    <tr>
+      <th>codigo_chd</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div>
+    <h3>Estatísticas Descritivas (Variáveis Categóricas)</h3>
+    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Contagem</th>
+      <th>Valores Únicos</th>
+      <th>Mais Frequente</th>
+      <th>Frequência do Top</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>uso_medicamentos</th>
+      <td>135</td>
+      <td>2</td>
+      <td>False</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <th>doppler_ducto_venoso</th>
+      <td>270</td>
+      <td>1</td>
+      <td>Alterado</td>
+      <td>270</td>
+    </tr>
+    <tr>
+      <th>eixo_cardiaco</th>
+      <td>270</td>
+      <td>1</td>
+      <td>Desviado</td>
+      <td>270</td>
+    </tr>
+    <tr>
+      <th>quatro_camaras</th>
+      <td>270</td>
+      <td>1</td>
+      <td>Anormal</td>
+      <td>270</td>
+    </tr>
+    <tr>
+      <th>class_pressao</th>
+      <td>270</td>
+      <td>2</td>
+      <td>Hipertensao</td>
+      <td>162</td>
+    </tr>
+    <tr>
+      <th>trimestre</th>
+      <td>270</td>
+      <td>2</td>
+      <td>3º Trimestre</td>
+      <td>268</td>
+    </tr>
+    <tr>
+      <th>alteracao_estrutural</th>
+      <td>135</td>
+      <td>1</td>
+      <td>True</td>
+      <td>135</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div>
+    <h3>Contagem de Casos</h3>
+    <p>Casos com CHD: 135</p>
+    <p>Casos sem CHD: 135</p>
+</div>
+
+<div>
+    <h3>Teste Mann-Whitney (Numéricas vs. CHD)</h3>
+    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variavel</th>
+      <th>p_valor</th>
+      <th>Significante (p &lt; 0.05)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>idade</td>
+      <td>0.875913</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td>imc</td>
+      <td>0.900116</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td>pressao_sistolica</td>
+      <td>0.649725</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td>frequencia_cardiaca_fetal</td>
+      <td>0.469276</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td>idade_gestacional</td>
+      <td>0.452394</td>
+      <td>Não</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div>
+    <h3>Teste Qui-Quadrado (Categóricas vs. CHD)</h3>
+    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variavel</th>
+      <th>p_valor</th>
+      <th>Significante (p &lt; 0.05)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>diabetes_gestacional</td>
+      <td>0.880686</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td>hipertensao_pre_eclampsia</td>
+      <td>0.455347</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td>obesidade_pre_gestacional</td>
+      <td>0.656645</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td>tabagismo</td>
+      <td>0.836556</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td>alcoolismo</td>
+      <td>0.684948</td>
+      <td>Não</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div>
+    <h3>Correlação de Spearman com 'chd_confirmada'</h3>
+    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chd_confirmada</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>chd_confirmada</th>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>saturacao</th>
+      <td>0.071406</td>
+    </tr>
+    <tr>
+      <th>frequencia_cardiaca_fetal</th>
+      <td>0.044170</td>
+    </tr>
+    <tr>
+      <th>bpm_materno</th>
+      <td>0.035130</td>
+    </tr>
+    <tr>
+      <th>translucencia_nucal_mm</th>
+      <td>0.033439</td>
+    </tr>
+    <tr>
+      <th>pressao_sistolica</th>
+      <td>0.027737</td>
+    </tr>
+    <tr>
+      <th>total_fatores_risco</th>
+      <td>0.015188</td>
+    </tr>
+    <tr>
+      <th>imc</th>
+      <td>0.007700</td>
+    </tr>
+    <tr>
+      <th>idade</th>
+      <td>-0.009568</td>
+    </tr>
+    <tr>
+      <th>diabetes_gestacional</th>
+      <td>-0.018270</td>
+    </tr>
+    <tr>
+      <th>circunferencia_cefalica_fetal_mm</th>
+      <td>-0.018967</td>
+    </tr>
+    <tr>
+      <th>historico_familiar_chd</th>
+      <td>-0.019069</td>
+    </tr>
+    <tr>
+      <th>tabagismo</th>
+      <td>-0.025110</td>
+    </tr>
+    <tr>
+      <th>temperatura_corporal</th>
+      <td>-0.029839</td>
+    </tr>
+    <tr>
+      <th>obesidade_pre_gestacional</th>
+      <td>-0.036073</td>
+    </tr>
+    <tr>
+      <th>circunferencia_abdominal_mm</th>
+      <td>-0.036936</td>
+    </tr>
+    <tr>
+      <th>alcoolismo</th>
+      <td>-0.037037</td>
+    </tr>
+    <tr>
+      <th>altura</th>
+      <td>-0.038299</td>
+    </tr>
+    <tr>
+      <th>idade_gestacional</th>
+      <td>-0.045863</td>
+    </tr>
+    <tr>
+      <th>hipertensao_pre_eclampsia</th>
+      <td>-0.053004</td>
+    </tr>
+    <tr>
+      <th>comprimento_femur_mm</th>
+      <td>-0.075041</td>
+    </tr>
+    <tr>
+      <th>peso</th>
+      <td>-0.076006</td>
+    </tr>
+    <tr>
+      <th>peso_fetal</th>
+      <td>-0.078860</td>
+    </tr>
+    <tr>
+      <th>gestante_id</th>
+      <td>-0.866055</td>
+    </tr>
+    <tr>
+      <th>consulta_numero</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>data_consulta</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>hipertensao</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>tipo_chd</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ano</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>num_chd_codigos</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>codigo_chd</th>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div><h2>Análises de Tabela Adicionais</h2><div class="card"><h3>Tabelas de Contingência: Alterações Estruturais vs. CHD</h3><h4>Doppler Ducto Venoso</h4><table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>chd_confirmada</th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+    <tr>
+      <th>doppler_ducto_venoso</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Alterado</th>
+      <td>135</td>
+      <td>135</td>
+    </tr>
+  </tbody>
+</table><h4>Eixo Cardiaco</h4><table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>chd_confirmada</th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+    <tr>
+      <th>eixo_cardiaco</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Desviado</th>
+      <td>135</td>
+      <td>135</td>
+    </tr>
+  </tbody>
+</table><h4>Quatro Camaras</h4><table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>chd_confirmada</th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+    <tr>
+      <th>quatro_camaras</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Anormal</th>
+      <td>135</td>
+      <td>135</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="card">
+    <h3>Estatísticas Descritivas por Grupo de Diagnóstico</h3>
+    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chd_confirmada</th>
+      <th>Sem CHD</th>
+      <th>Com CHD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">idade</th>
+      <th>mean</th>
+      <td>29.437037</td>
+      <td>29.377778</td>
+    </tr>
+    <tr>
+      <th>median</th>
+      <td>28.000000</td>
+      <td>28.000000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>8.409844</td>
+      <td>7.949342</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">imc</th>
+      <th>mean</th>
+      <td>24.856559</td>
+      <td>24.950755</td>
+    </tr>
+    <tr>
+      <th>median</th>
+      <td>24.982699</td>
+      <td>24.982699</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>3.961955</td>
+      <td>4.275410</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">pressao_sistolica</th>
+      <th>mean</th>
+      <td>142.170370</td>
+      <td>142.555556</td>
+    </tr>
+    <tr>
+      <th>median</th>
+      <td>141.000000</td>
+      <td>141.000000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>6.699901</td>
+      <td>7.007104</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">translucencia_nucal_mm</th>
+      <th>mean</th>
+      <td>3.477037</td>
+      <td>3.520000</td>
+    </tr>
+    <tr>
+      <th>median</th>
+      <td>3.500000</td>
+      <td>3.600000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.628661</td>
+      <td>0.599851</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">frequencia_cardiaca_fetal</th>
+      <th>mean</th>
+      <td>174.066667</td>
+      <td>174.844444</td>
+    </tr>
+    <tr>
+      <th>median</th>
+      <td>173.000000</td>
+      <td>175.000000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>8.940266</td>
+      <td>8.683375</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2>Análise de Fatores de Risco e Prevalência</h2>
+<div class="card">
+    <h3>Frequência Absoluta de Fatores de Risco</h3>
+    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>diabetes_gestacional</th>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>hipertensao</th>
+      <td>270</td>
+    </tr>
+    <tr>
+      <th>hipertensao_pre_eclampsia</th>
+      <td>163</td>
+    </tr>
+    <tr>
+      <th>obesidade_pre_gestacional</th>
+      <td>58</td>
+    </tr>
+    <tr>
+      <th>tabagismo</th>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>alcoolismo</th>
+      <td>27</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2>Análise Fetal (Tabelas)</h2>
+<div class="card"><h3>Estatísticas Descritivas (Variáveis Fetais Categóricas)</h3><table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Contagem</th>
+      <th>Valores Únicos</th>
+      <th>Mais Frequente (Top)</th>
+      <th>Frequência do Top</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>doppler_ducto_venoso</th>
+      <td>270</td>
+      <td>1</td>
+      <td>Alterado</td>
+      <td>270</td>
+    </tr>
+    <tr>
+      <th>eixo_cardiaco</th>
+      <td>270</td>
+      <td>1</td>
+      <td>Desviado</td>
+      <td>270</td>
+    </tr>
+    <tr>
+      <th>quatro_camaras</th>
+      <td>270</td>
+      <td>1</td>
+      <td>Anormal</td>
+      <td>270</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2>Análise de Outliers</h2>
+<div class="card"><h3>Resumo de Outliers (Método IQR)</h3><table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nº de Outliers</th>
+      <th>% de Outliers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>idade</th>
+      <td>6</td>
+      <td>2.22%</td>
+    </tr>
+    <tr>
+      <th>idade_gestacional</th>
+      <td>4</td>
+      <td>1.48%</td>
+    </tr>
+    <tr>
+      <th>diabetes_gestacional</th>
+      <td>56</td>
+      <td>20.74%</td>
+    </tr>
+    <tr>
+      <th>obesidade_pre_gestacional</th>
+      <td>58</td>
+      <td>21.48%</td>
+    </tr>
+    <tr>
+      <th>historico_familiar_chd</th>
+      <td>50</td>
+      <td>18.52%</td>
+    </tr>
+    <tr>
+      <th>tabagismo</th>
+      <td>26</td>
+      <td>9.63%</td>
+    </tr>
+    <tr>
+      <th>alcoolismo</th>
+      <td>27</td>
+      <td>10.00%</td>
+    </tr>
+    <tr>
+      <th>peso</th>
+      <td>14</td>
+      <td>5.19%</td>
+    </tr>
+    <tr>
+      <th>imc</th>
+      <td>16</td>
+      <td>5.93%</td>
+    </tr>
+  </tbody>
+</table></div>
+
+        </div>
+
+        <div id="Graphs" class="tabcontent">
+            <h2>Visualizações Gerais</h2><div class='plots-container'>
+<div class="card" style="flex: 1 1 48%;">
+    <h3>Frequência Absoluta de Fatores de Risco (Chart.js)</h3>
+    <canvas id="fatoresRiscoChart"></canvas>
+    <script>
+        const ctx = document.getElementById('fatoresRiscoChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["hipertensao", "hipertensao_pre_eclampsia", "obesidade_pre_gestacional", "diabetes_gestacional", "alcoolismo", "tabagismo"],
+                datasets: [{
+                    label: 'Contagem Total',
+                    data: [270, 163, 58, 56, 27, 26],
+                    backgroundColor: 'rgba(52, 152, 219, 0.6)',
+                    borderColor: 'rgba(52, 152, 219, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: true
+            }
+        });
+    </script>
+</div>
+<div class='card' style='flex: 1 1 100%;'><h3>Painel de Distribuição de Sinais Vitais Maternos</h3><img src='/output/plot_geral_sinais_vitais.png'></div><div class="card" style="flex: 1 1 100%;"><h3>Painel: Perfil Materno Geral</h3><img src="/output/plot_geral_perfil_materno.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel: Perfil Demográfico e Gestacional</h3><img src="/output/plot_geral_perfil_demografico.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel: Estilo de Vida e Condições Pré-existentes</h3><img src="/output/plot_geral_perfil_lifestyle.png"></div><div class='card' style='flex: 1 1 48%;'><h3>Boxplots: Numéricas vs CHD</h3><img src='/output/plot_02_boxplots_numericas.png'></div></div><h2>Análises Cruzadas</h2><div class='plots-container'><div class="card" style="flex: 1 1 100%;"><h3>Painel de Proporções por Fator de Risco</h3><img src="/output/plot_07_painel_proporcoes.png"></div></div><h2>Análise Fetal</h2><div class='plots-container'><div class="card" style="flex: 1 1 100%;"><h3>Painel de Variáveis Fetais Numéricas</h3><img src="/output/plot_fetal_painel_numerico.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel de Contagem: Alterações Estruturais</h3><img src="/output/plot_06_painel_alteracoes_estruturais.png"></div></div><h2>Análise Focada por Comorbidade</h2><div class='plots-container'><div class="card" style="flex: 1 1 100%;"><h3>Painel de Análise: Diabetes Gestacional</h3><img src="/output/plot_18_painel_diabetes_gestacional.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel de Análise: Hipertensao</h3><img src="/output/plot_18_painel_hipertensao.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel de Análise: Hipertensao Pre Eclampsia</h3><img src="/output/plot_18_painel_hipertensao_pre_eclampsia.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel de Análise: Obesidade Pre Gestacional</h3><img src="/output/plot_18_painel_obesidade_pre_gestacional.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel de Análise: Tabagismo</h3><img src="/output/plot_18_painel_tabagismo.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel de Análise: Alcoolismo</h3><img src="/output/plot_18_painel_alcoolismo.png"></div></div><h2>Análise de Sinais Vitais por Comorbidade</h2><div class='plots-container' style='flex-direction: column;'><div class="card" style="flex: 1 1 100%;"><h3>Painel de Sinais Vitais: Diabetes Gestacional</h3><img src="/output/plot_19_painel_sinais_diabetes_gestacional.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel de Sinais Vitais: Hipertensao</h3><img src="/output/plot_19_painel_sinais_hipertensao.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel de Sinais Vitais: Hipertensao Pre Eclampsia</h3><img src="/output/plot_19_painel_sinais_hipertensao_pre_eclampsia.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel de Sinais Vitais: Obesidade Pre Gestacional</h3><img src="/output/plot_19_painel_sinais_obesidade_pre_gestacional.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel de Sinais Vitais: Tabagismo</h3><img src="/output/plot_19_painel_sinais_tabagismo.png"></div><div class="card" style="flex: 1 1 100%;"><h3>Painel de Sinais Vitais: Alcoolismo</h3><img src="/output/plot_19_painel_sinais_alcoolismo.png"></div></div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        if (evt) { evt.currentTarget.className += " active"; }
+    }
+    // Garante que a primeira aba seja aberta por padrão.
+    if (document.getElementById("defaultOpen")) {
+        document.getElementById("defaultOpen").click();
+    }
+</script>

@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>Relatório de Análise de Dados</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f4f4;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+background:white;
+padding:30px;
+}
+
+.section{
+margin-top:50px;
+}
+
+.table{
+width:100%;
+border-collapse:collapse;
+}
+
+.table th,.table td{
+border:1px solid #ddd;
+padding:8px;
+}
+
+.table th{
+background:#2c3e50;
+color:white;
+}
+
+.plot-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.plot-grid img{
+width:100%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Relatório de Análise de Dados</h1>
+
+<h2 class='section'>Tabelas Estatísticas</h2>
+<h3>Tabela 1 — Valores Faltantes</h3>
+<table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Total Faltante</th>
+      <th>% Faltante</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>consulta_numero</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>data_consulta</th>
+      <td>135</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>idade</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>idade_gestacional</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>pressao_sistolica</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>bpm_materno</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>saturacao</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>temperatura_corporal</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>altura</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>peso_fetal</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>diabetes_gestacional</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>hipertensao</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>hipertensao_pre_eclampsia</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>obesidade_pre_gestacional</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>historico_familiar_chd</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>uso_medicamentos</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>tabagismo</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>alcoolismo</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>frequencia_cardiaca_fetal</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>circunferencia_cefalica_fetal_mm</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>circunferencia_abdominal_mm</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>comprimento_femur_mm</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>translucencia_nucal_mm</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>doppler_ducto_venoso</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>eixo_cardiaco</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>quatro_camaras</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>chd_confirmada</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>tipo_chd</th>
+      <td>135</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>peso</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>ano</th>
+      <td>135</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>imc</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>class_pressao</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>trimestre</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>total_fatores_risco</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>alteracao_estrutural</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>num_chd_codigos</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>gestante_id</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>codigo_chd</th>
+      <td>135</td>
+      <td>100.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Tabela 2 — Estatísticas Descritivas</h3>
+<table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Média</th>
+      <th>Mediana</th>
+      <th>Desvio Padrão</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>consulta_numero</th>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>0.819538</td>
+    </tr>
+    <tr>
+      <th>data_consulta</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>idade</th>
+      <td>29.377778</td>
+      <td>28.000000</td>
+      <td>7.949342</td>
+    </tr>
+    <tr>
+      <th>idade_gestacional</th>
+      <td>39.375556</td>
+      <td>39.600000</td>
+      <td>4.827834</td>
+    </tr>
+    <tr>
+      <th>pressao_sistolica</th>
+      <td>142.555556</td>
+      <td>141.000000</td>
+      <td>7.007104</td>
+    </tr>
+    <tr>
+      <th>bpm_materno</th>
+      <td>101.688889</td>
+      <td>101.000000</td>
+      <td>7.023911</td>
+    </tr>
+    <tr>
+      <th>saturacao</th>
+      <td>91.400000</td>
+      <td>91.000000</td>
+      <td>1.328224</td>
+    </tr>
+    <tr>
+      <th>temperatura_corporal</th>
+      <td>36.891111</td>
+      <td>36.900000</td>
+      <td>0.362097</td>
+    </tr>
+    <tr>
+      <th>altura</th>
+      <td>1.660889</td>
+      <td>1.670000</td>
+      <td>0.054642</td>
+    </tr>
+    <tr>
+      <th>peso_fetal</th>
+      <td>2579.666667</td>
+      <td>2730.000000</td>
+      <td>941.383842</td>
+    </tr>
+    <tr>
+      <th>diabetes_gestacional</th>
+      <td>0.200000</td>
+      <td>0.000000</td>
+      <td>0.401490</td>
+    </tr>
+    <tr>
+      <th>hipertensao</th>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>hipertensao_pre_eclampsia</th>
+      <td>0.577778</td>
+      <td>1.000000</td>
+      <td>0.495753</td>
+    </tr>
+    <tr>
+      <th>obesidade_pre_gestacional</th>
+      <td>0.200000</td>
+      <td>0.000000</td>
+      <td>0.401490</td>
+    </tr>
+    <tr>
+      <th>historico_familiar_chd</th>
+      <td>0.177778</td>
+      <td>0.000000</td>
+      <td>0.383750</td>
+    </tr>
+    <tr>
+      <th>tabagismo</th>
+      <td>0.088889</td>
+      <td>0.000000</td>
+      <td>0.285643</td>
+    </tr>
+    <tr>
+      <th>alcoolismo</th>
+      <td>0.088889</td>
+      <td>0.000000</td>
+      <td>0.285643</td>
+    </tr>
+    <tr>
+      <th>frequencia_cardiaca_fetal</th>
+      <td>174.844444</td>
+      <td>175.000000</td>
+      <td>8.683375</td>
+    </tr>
+    <tr>
+      <th>circunferencia_cefalica_fetal_mm</th>
+      <td>328.053333</td>
+      <td>330.700000</td>
+      <td>11.904651</td>
+    </tr>
+    <tr>
+      <th>circunferencia_abdominal_mm</th>
+      <td>309.597778</td>
+      <td>311.900000</td>
+      <td>11.699875</td>
+    </tr>
+    <tr>
+      <th>comprimento_femur_mm</th>
+      <td>70.206667</td>
+      <td>70.600000</td>
+      <td>2.731770</td>
+    </tr>
+    <tr>
+      <th>translucencia_nucal_mm</th>
+      <td>3.520000</td>
+      <td>3.600000</td>
+      <td>0.599851</td>
+    </tr>
+    <tr>
+      <th>chd_confirmada</th>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>tipo_chd</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>peso</th>
+      <td>68.726667</td>
+      <td>67.500000</td>
+      <td>11.471641</td>
+    </tr>
+    <tr>
+      <th>ano</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>imc</th>
+      <td>24.950755</td>
+      <td>24.982699</td>
+      <td>4.275410</td>
+    </tr>
+    <tr>
+      <th>total_fatores_risco</th>
+      <td>2.333333</td>
+      <td>2.000000</td>
+      <td>0.992509</td>
+    </tr>
+    <tr>
+      <th>num_chd_codigos</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>gestante_id</th>
+      <td>23.000000</td>
+      <td>23.000000</td>
+      <td>13.035543</td>
+    </tr>
+    <tr>
+      <th>codigo_chd</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Tabela 3 — Teste de Normalidade (Shapiro-Wilk)</h3>
+<table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>p_valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>consulta_numero</th>
+      <td>1.570383e-12</td>
+    </tr>
+    <tr>
+      <th>idade</th>
+      <td>5.625229e-04</td>
+    </tr>
+    <tr>
+      <th>idade_gestacional</th>
+      <td>1.094925e-02</td>
+    </tr>
+    <tr>
+      <th>pressao_sistolica</th>
+      <td>1.220004e-04</td>
+    </tr>
+    <tr>
+      <th>bpm_materno</th>
+      <td>1.704753e-04</td>
+    </tr>
+    <tr>
+      <th>saturacao</th>
+      <td>3.981460e-10</td>
+    </tr>
+    <tr>
+      <th>temperatura_corporal</th>
+      <td>2.214941e-05</td>
+    </tr>
+    <tr>
+      <th>altura</th>
+      <td>3.905468e-07</td>
+    </tr>
+    <tr>
+      <th>peso_fetal</th>
+      <td>4.318984e-05</td>
+    </tr>
+    <tr>
+      <th>diabetes_gestacional</th>
+      <td>1.081113e-19</td>
+    </tr>
+    <tr>
+      <th>hipertensao</th>
+      <td>1.000000e+00</td>
+    </tr>
+    <tr>
+      <th>hipertensao_pre_eclampsia</th>
+      <td>5.455297e-17</td>
+    </tr>
+    <tr>
+      <th>obesidade_pre_gestacional</th>
+      <td>1.081113e-19</td>
+    </tr>
+    <tr>
+      <th>historico_familiar_chd</th>
+      <td>3.853837e-20</td>
+    </tr>
+    <tr>
+      <th>tabagismo</th>
+      <td>2.397747e-22</td>
+    </tr>
+    <tr>
+      <th>alcoolismo</th>
+      <td>2.397747e-22</td>
+    </tr>
+    <tr>
+      <th>frequencia_cardiaca_fetal</th>
+      <td>2.536368e-06</td>
+    </tr>
+    <tr>
+      <th>circunferencia_cefalica_fetal_mm</th>
+      <td>3.750011e-06</td>
+    </tr>
+    <tr>
+      <th>circunferencia_abdominal_mm</th>
+      <td>1.622994e-08</td>
+    </tr>
+    <tr>
+      <th>comprimento_femur_mm</th>
+      <td>1.634218e-04</td>
+    </tr>
+    <tr>
+      <th>translucencia_nucal_mm</th>
+      <td>3.344993e-06</td>
+    </tr>
+    <tr>
+      <th>chd_confirmada</th>
+      <td>1.000000e+00</td>
+    </tr>
+    <tr>
+      <th>peso</th>
+      <td>1.020066e-04</td>
+    </tr>
+    <tr>
+      <th>imc</th>
+      <td>3.186149e-03</td>
+    </tr>
+    <tr>
+      <th>total_fatores_risco</th>
+      <td>1.752731e-09</td>
+    </tr>
+    <tr>
+      <th>num_chd_codigos</th>
+      <td>1.000000e+00</td>
+    </tr>
+    <tr>
+      <th>gestante_id</th>
+      <td>1.569370e-04</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Tabela 4 — Teste Mann-Whitney</h3>
+<table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Variável</th>
+      <th>p_valor</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<h3>Tabela 5 — Teste Qui-Quadrado</h3>
+<table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Variável</th>
+      <th>p_valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>diabetes_gestacional</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>hipertensao_pre_eclampsia</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>obesidade_pre_gestacional</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>tabagismo</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>alcoolismo</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Tabela 6 — Correlação com CHD</h3>
+<table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chd_confirmada</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>consulta_numero</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>data_consulta</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>idade</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>idade_gestacional</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>pressao_sistolica</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>bpm_materno</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>saturacao</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>temperatura_corporal</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>altura</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>peso_fetal</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>diabetes_gestacional</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>hipertensao</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>hipertensao_pre_eclampsia</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>obesidade_pre_gestacional</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>historico_familiar_chd</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>tabagismo</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>alcoolismo</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>frequencia_cardiaca_fetal</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>circunferencia_cefalica_fetal_mm</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>circunferencia_abdominal_mm</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>comprimento_femur_mm</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>translucencia_nucal_mm</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>chd_confirmada</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>tipo_chd</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>peso</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ano</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>imc</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>total_fatores_risco</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>num_chd_codigos</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>gestante_id</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>codigo_chd</th>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<h2 class='section'>Visualizações Gráficas</h2><div class='plot-grid'>
+<div>
+<h3>Figura 1 — Distribuição da Idade</h3>
+<img src="idade_dist.png">
+</div>
+
+<div>
+<h3>Figura 2 — IMC vs CHD</h3>
+<img src="box_imc.png">
+</div>
+
+<div>
+<h3>Figura 3 — Pressão Sistólica</h3>
+<img src="pressao.png">
+</div>
+
+<div>
+<h3>Figura 4 — Fatores de Risco</h3>
+<img src="fatores_risco.png">
+</div>
+
+<div>
+<h3>Figura 5 — Matriz de Correlação</h3>
+<img src="correlacao.png">
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
+
